@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paul McDermott's portfolio showcasing web development projects.">
+    <title>Portfolio - Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!--------------------Top Section of Page (header, nav & welcome banner)-------------->
+
+    <!------------------------------------Navigation Menu---------------------------------->
+    <header>
+        <div id="header">
+            <div class="nav-section">
+                <img src="Images/logopink.png" alt="Paul McDermott Portfolio Logo">
+                <nav>
+                    <ul id="sidemenu">
+                        <li><a href="#project-section">Projects</a></li>
+                        <li><a href="#contact-section">Contact</a></li>
+
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+            </div>
+
+            <!----------------------WelcomeBanner--------------------->
+            <section id="top-section">
+                <div class="welcome-container">
+                    <div class="welcome-banner">
+                        <h1>Welcome</h1>
+                    </div>
+                    <div id="about-me">
+                        <details>
+                            <summary onclick="openSection()">About Me (Open Section)</summary>
+                            <p>
+                                I’m a junior developer with a passion for technology and creativity. I began learning to
+                                code in July 2024, focusing on HTML, CSS, and JavaScript, and I’m steadily building a
+                                foundation in web development. My background in music production has given me years of
+                                experience working with computers and digital tools, fostering problem-solving skills
+                                and a strong interest in tech.
+                                I’m excited to start my career in software and web development, and while I’m just
+                                getting started, this portfolio showcases my commitment to learning and growing in the
+                                field.
+                            </p>
+                        </details>
+                    </div>
+                    <a class="section-button" id="project-section-button" href="#project-section">See Projects</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <!------------------------End of Header Section---------------------->
+
+    <hr>
+
+    <!------------------------Projects Section---------------------------->
+    <section id="project-section" aria-labelledby="projects-title">
+        <div class="container">
+            <div class="welcome-banner">
+                <h2 id="projects-title">Projects</h2>
+            </div>
+
+            <div id="project-container">
+                <button onclick="switchTab('project-content1')" id="project-tab1" data-target="project-content1" role="tab" aria-controls="project-content1">Project
+                    1: <br> TaskList</button>
+                <button onclick="switchTab('project-content2')" id="project-tab2" data-target="project-content2" role="tab" aria-controls="project-content2">Project
+                    2: <br> Calculator</button>
+                <button onclick="switchTab('project-content3')" id="project-tab3" data-target="project-content3" role="tab" aria-controls="project-content3">Project
+                    3: Interactive Gallery</button>
+
+
+                <!------------------------TaskList Project--------------------------->
+                <div id="project-content1" class="project-content visible">
+                    <div class="project-links">
+                        <a href="https://paulmcdermotts.github.io/tasklist/">Link 1: TaskList</a>
+                        <a href="https://github.com/paulmcdermotts/tasklist.git">Link 2: GitHub Repository</a>
+                    </div>
+                    <div class="image-container">
+                        <a href="Images/tasklist_screenshot.png" data-lightbox="roadtrip"
+                            data-title="TaskList application">
+                            <img src="Images/tasklist_screenshot.png" alt="Task list application screenshot">
+                        </a>
+                        <a href="Images/tasklist_example_1.png" data-lightbox="roadtrip"
+                            data-title="Example: some tasks added to list">
+                            <img src="Images/tasklist_example_1.png" alt="Example of tasks being added to task list application">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div id="project-content2" class="project-content hidden">
+                    <div class="project-links">
+                        <a href="https://paulmcdermotts.github.io/calculator/">Link 1: Calculator App</a>
+                        <a href="https://github.com/paulmcdermotts/calculator.git">Link 2: GitHub Repository</a>
+                    </div>
+
+                    <div class="image-container">
+                        <a href="Images/calc_img1.png" data-lightbox="roadtrip" data-title="Calculator application">
+                            <img src="Images/calc_img1.png" alt="Screenshot of simple calculator application">
+                        </a>
+                        <a href="Images/calc_responsive.png" data-lightbox="roadtrip" data-title="Responsive example">
+                            <img src="Images/calc_responsive.png" alt="Example of the calculator application on a smaller screen">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div id="project-content3" class="project-content hidden">
+                    <div class="project-links">
+                        <a href="https://paulmcdermotts.github.io/intgallery/">Link 1: Interactive Gallery</a>
+                        <a href="https://github.com/paulmcdermotts/intgallery.git">Link 2: GitHub Repository</a>
+                    </div>
+
+                    <div class="image-container">
+                        <a href="Images/int_gallery_main.png" data-lightbox="roadtrip" data-title="Interactive gallery">
+                            <img src="Images/int_gallery_main.png" alt="Screenshot of interactive gallery">
+                        </a>
+                        <a href="Images/int_gallery_open.png" data-lightbox="roadtrip" data-title="Image open">
+                            <img src="Images/int_gallery_open.png" alt="Example of images being added to interactive gallery">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <a class="section-button" href="#contact-section">Contact</a>
+        </div>
+    </section>
+
+    <!------------------------End of Projects Section------------------->
+    <hr>
+    <!------------------------Contact Section--------------------------->
+
+    <!-------------------------Contact Banner-------------------------->
+    <section>
+        <div class="contact-container" id="contact-section">
+            <div class="container">
+                <div class="welcome-banner">
+                    <h2>Get in Touch</h2>
+                </div>
+
+
+                <!------------------Top Section (Social Icons, Contact Info)------------->
+                <div class="contact-form">
+
+                    <div class="contact-top">
+                        <form action="https://formspree.io/f/mpwqwvbz" method="POST">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Enter full name" required>
+
+                            <label for="email">Email Address:</label>
+                            <input type="email" name="email" id="email" placeholder="Enter email address" required>
+
+                            <textarea name="message" id="message" placeholder="Enter Your Message..."></textarea>
+
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+
+
+
+                    <!-------------------Bottom Section (Contact Form)------------------------->
+
+                    <div class="contact-bottom">
+                        <p><i class="fa-solid fa-envelope"></i> paulmcdermotts@live.co.uk</p>
+                    </div>
+                </div>
+                <a class="section-button" href="#header">Back to Top</a>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------Footer Section--------------------------->
+
+    <footer>
+        <span class="footer-text">&copy 2025 | Paul McDermott</span>
+
+        <div class="footer-links">
+            <a href="https://facebook.com/paul.mcdermott.90/" target="_blank" aria-label="Facebook profile"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/moyscapemusic/" target="_blank"><i class="fa-brands fa-x-twitter" aria-label="Twitter profile"></i></a>
+            <a href="https://www.linkedin.com/in/paul-mcdermott-02b226316/" target="_blank" aria-label="LinkedIn profile"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+
+    <!---------------------------------JavaScript------------------------------------->
+
+
+    <script>
+        // open and close the side menu on smaller screens
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-120px";
+        }
+
+        // switch project tab function
+        function switchTab(contentId) {
+            const allContent = document.querySelectorAll('.project-content');
+            allContent.forEach(content => {
+                content.classList.remove('visible');
+                content.classList.add('hidden');
+            });
+
+            const targetContent = document.getElementById(contentId);
+            targetContent.classList.remove('hidden');
+            targetContent.classList.add('visible');
+        }
+
+        function openSection() {
+           const summary =  document.querySelector("summary");
+           const details = document.querySelector("details");
+           const projectSectionButton = document.getElementById("project-section-button");
+
+        setTimeout(() => {
+            if (details.open) {
+            projectSectionButton.style.visibility = "hidden";
+            summary.innerText = "Close Section"
+           } else {
+            projectSectionButton.style.visibility = "visible";
+            summary.innerText = "About Me (Open Section)";
+           }
+    }, 0);
+}
+    </script>
+
+    <script src="https://kit.fontawesome.com/d211310cc8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="lightbox-plus-jquery.min.js"></script>
+
+</body>
+
+</html>

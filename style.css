@@ -1,0 +1,508 @@
+/* ------------------------ Body & HTML ----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+    color: #f0f0f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    border-bottom: 2px solid #c6009e;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.25rem; }
+
+
+hr {
+    border-color: #c6009e;
+}
+
+span,
+p,
+a,
+input,
+textarea,
+button,
+label {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* links */
+a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.6s;
+}
+
+a:hover {
+    color: #c6009e;
+    opacity: 1;
+}
+
+
+/* section button */
+.section-button {
+    background-color: #c6009e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+
+}
+
+.section-button:hover {
+    background-color: #fff;
+}
+
+/* font awesome icons */
+.fa-solid {
+    color: #c6009e;
+}
+
+/* make x and hamburger icon disappear on larger screens (default */
+nav .fa-bars,
+nav .fa-xmark {
+    display: none;
+}
+
+/* -------------------Navigation----------------------- */
+
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #c6009e;
+    z-index: 2;
+}
+
+.nav-section img { /* the logo on left of navbar */
+    width: 150px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 20px;
+    transition: 0.6s;
+}
+
+nav ul li:hover {
+    color: #c6009e;
+}
+
+
+/* ---------------------- Header ----------------------- */
+#header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* pushes the content in front of the background image */
+}
+
+#header::before {
+    content: '';
+    position: absolute; /* keeps the image behind the header and footer */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/room-pic.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+    /* make sure the background stays behind the other content */
+}
+
+
+.welcome-container { /* the div containing the welcome banner */
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.welcome-banner {  /* This is the welcome message box at top of page */
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.welcome-banner h1 {
+    font-size: 5rem;
+    text-shadow: 1px 5px 20px #c6009e;
+
+}
+
+
+.container { /* main container for each section of the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.welcome-container h1, .welcome-container h2, .container h2 {
+    text-transform: uppercase;
+}
+
+
+.welcome-banner a:hover, .container a:hover {
+    color: #c6009e;
+}
+
+.welcome-container button, .container button {
+    width: 150px;
+    padding: 10px;
+    border: solid 1px #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px black;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.welcome-container button:hover, .container button:hover {
+    background-color: #c6009e;
+    border: solid 2px black;
+    cursor: pointer;
+}
+
+/* About Me section */
+
+#about-me {
+    margin-top: 5px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#about-me summary {
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#about-me summary:hover {
+    cursor: pointer;
+    color: #c6009e;
+}
+details p {
+    margin-top: 5px;
+    text-align: start;
+    max-height: 300px;
+    overflow-y: auto;
+}
+/*------------------ Footer Section --------------------*/
+
+footer {
+    margin: 0;
+    border-top: solid 1px #c6009e;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    background-color: #000;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+footer a {
+    font-size: 24px;
+    color: #d7d4d4;
+    transition: 0.5s;
+    margin: 5px;
+}
+
+footer a:hover {
+    color: #c6009e;
+}
+
+
+/*-----------------Projects Section---------------*/
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/*-----------------Project Images---------------*/
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.image-container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    border: solid 2px #c6009e;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 15px rgb(198, 0, 158)
+}
+
+
+
+/* -------------------- Contact Section ------------------ */
+
+.contact-container {
+
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+    position: relative;
+    flex-direction: column;
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form label {
+    display: flex;
+
+}
+.contact-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-bottom p {
+    margin-top: 10px;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    padding: 10px;
+    border: solid 1px #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px black;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.contact-form button:hover {
+    background-color: #c6009e;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+   
+
+}
+
+form input:focus, textarea:focus {
+    background-color: #ababab;
+    color: #080808;
+    transition: 0.5s ease-in;
+}
+
+
+/*----------------------------Media Queries (Responsiveness)------------------------*/
+
+@media (max-width: 1440px) {
+    /* about me section */
+    #about-me summary {
+        font-size: 16px;
+    }
+    details p {
+        max-height: 150px;
+    }
+
+}
+@media (max-width: 768px){
+
+/* Welcome Section Media Queries */
+
+   .welcome-banner h1 {
+    font-size: 2.5rem;
+   }
+
+   .welcome-banner h2 {
+    font-size: 2rem;
+   }
+
+   .welcome-banner p {
+    font-size: 14px;
+   }
+
+   /* Image Container Media Queries */
+
+   #project-tab1, #project-tab2, #project-tab3 {
+    font-size: 12px;
+   }
+   .image-container {
+    flex-direction: column;
+   }
+   .image-container img {
+    height: 50%;
+   }
+
+
+   /* Contact Media Queries */
+
+   .contact-form {
+    flex-direction: column;
+   }
+
+   .contact-top {
+    width: 80%;
+   }
+
+   .contact-bottom p {
+    font-size: 16px;
+   }
+
+   .social-icons a {
+    font-size: 24px;
+   }
+
+/* About Me Media Queries */ 
+    #about-me summary {
+        font-size: 18px;
+    }
+
+    details p {
+        max-height: 200px;
+    }
+
+         /* -----------------Hamburger Nav Menu (Media Query (cont'd))----------------*/
+
+
+nav .fa-solid {
+    display: block;
+    font-size: 25px;
+   }
+
+   nav ul {
+    background: #c6009e;
+    position: fixed;
+    top: 0;
+    right: -120px;
+    width: 120px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+   }
+
+   nav ul li {
+    display: block;
+    margin: 25px;
+   }
+
+   nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    color: white;
+   }
+
+}
+
+/* -------------------- Very small screens ---------------- */
+@media (max-width: 420px) {
+
+    .welcome-banner h1 {
+        font-size: 3rem;
+    }
+    .welcome-banner h2 {
+        font-size: 1.5rem;
+} 
+
+    .welcome-banner p, .welcome-banner a {
+        font-size: 10px;
+    }
+
+/* footer section */
+    footer span {
+        font-size: 14px;
+    }
+
+/* about me section */
+    #about-me summary {
+        font-size: 14px;
+    }
+    details p {
+        max-height: 150px;
+        font-size: 12px;
+    }
+
+    
+}
